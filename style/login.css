@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:ital,wght@1,100&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+header{
+    padding: 1%;
+    display: flex;
+    width: 100%;
+    background: linear-gradient(90deg,white,rgba(150, 235, 150, 0.651),rgba(1, 102, 1, 0.692),rgba(1, 102, 1, 0.897));
+}
+#logo>a>img{
+    float: left;
+    padding: 2% 4%;
+    width: 30%;
+}
+
+/*Tela de login*/
+main{
+    background-image: linear-gradient(rgba(0,0,0.8),rgba(0,0,0,0.8)20%),url("../img/background.png");
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.container{
+    width: 100%;
+    display: flex;/*Alinha no centro da classe pai*/
+    justify-content: center;
+    align-items: center;/*Fim*/
+    flex-direction: column/*Alinha em coluna*/
+}
+.login{
+    background-color: rgba(255, 255, 255, 0.61);
+    box-shadow: 10px 5px 5px rgb(34, 32, 32);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 25px;
+    display: flex;/*Alinha no centro da classe pai*/
+    justify-content: center;
+    align-items: center;/*Fim*/
+    flex-direction: column;/*Alinha em coluna*/
+    width: 27%;
+    padding: 2%;
+    padding-bottom: 5%;
+    padding-bottom: 5%;
+}
+.login>h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(1, 102, 1, 0.897);
+    padding: 20px;
+}
+.login i{
+    color: rgba(1, 102, 1, 0.897);
+    font-size: 27px;
+}
+.linha{
+    height: 3px;
+    background-color: rgba(1, 102, 1, 0.897);
+    border-radius: 20px;
+    width: 90%;
+}
+
+input{
+    padding: 5px;
+    height: 30px;
+    color: rgba(1, 102, 1, 0.897);
+    border-radius: 4px;
+    border: none;
+    box-shadow: 7px 5px 5px rgb(155, 150, 150);
+}
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.login #email{
+    margin-top: 30%;
+    font-size: 20px;
+}
+.login #senha{
+    margin-top: 5%;
+    width: 60%;
+    font-size: 20px;
+}
+#email::-webkit-input-placeholder{
+    color: rgba(1, 102, 1, 0.897);
+    letter-spacing: 2px;
+}
+#senha::-webkit-input-placeholder{
+    color: rgba(1, 102, 1, 0.897);
+    letter-spacing: 2px;
+}
+#trocarSenha{
+    font-weight: bold;
+    margin-bottom: 10%;
+    margin-top: 5%;
+    color: rgba(1, 102, 1, 0.897);
+    text-decoration: none;
+}
+
+#logar,#cadastrar{
+    transition: 0.4s;
+    margin-top: 4%;
+    color: aliceblue;
+    font-size: 19px;
+    font-weight: bold;
+    width: 60%;
+    height: 40px;
+    border: none;
+    background-color:rgba(1, 102, 1, 0.897);
+    border-radius: 20px;
+    cursor: pointer;
+}
+#logar:hover,#cadastrar:hover{
+    transform: scale(1.05);
+    background-color:rgb(1, 102, 1) ;
+}

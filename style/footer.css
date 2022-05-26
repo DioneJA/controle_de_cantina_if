@@ -1,0 +1,44 @@
+footer{
+    background:linear-gradient(90deg, rgb(1, 102, 1),rgba(14, 151, 14, 0.836),rgb(1, 102, 1));
+    position: static;
+    bottom: 0;
+    width: 100%;
+}
+.footer{
+    padding: 20px;
+    display: flex;/*Alinha no centro da classe pai*/
+    justify-content: center;
+    align-items: center;/*Fim*/
+    flex-direction: column/*Alinha em coluna*/
+}
+.footer img{
+    width: 5%;
+}
+.texto{
+    padding: 1%;
+}
+.texto p{
+    letter-spacing: 1px;
+    font-size: 12pt;
+    text-align: center;
+    color: aliceblue;
+}
+.links{
+    width: 30%;
+    display: flex;/*Alinha no centro da classe pai*/
+    justify-content: center;
+    align-items: center;/*Fim*/
+}
+.links a{
+    width: 12%;
+    height: auto;
+    margin-left: 0%;
+    margin-top: 1%;
+}
+.links img{
+    transition: 0.3s ease-in-out;
+    width: 48%;
+}
+.links a:hover>img{
+    transform: scale(1.15);
+}
