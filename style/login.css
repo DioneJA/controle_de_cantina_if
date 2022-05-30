@@ -1,121 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto:ital,wght@1,100&display=swap');
-
-*{
+* {
     font-family: 'Montserrat', sans-serif;
 }
-body{
+
+body {
     overflow-x: hidden;
 }
-header{
-    padding: 1%;
+
+header {
     display: flex;
     width: 100%;
-    background: linear-gradient(90deg,white,rgba(150, 235, 150, 0.651),rgba(1, 102, 1, 0.692),rgba(1, 102, 1, 0.897));
+    background: linear-gradient(90deg, rgb(197, 252, 181), rgba(131, 250, 131, 0.651), rgba(59, 250, 59, 0.692), rgba(4, 141, 4, 0.897));
 }
-#logo>a>img{
+
+#logo>a>img {
     float: left;
-    padding: 2% 4%;
+    padding: 1.4% 4%;
     width: 30%;
 }
 
 /*Tela de login*/
-main{
-    background-image: linear-gradient(rgba(0,0,0.8),rgba(0,0,0,0.8)20%),url("../img/background.png");
-    padding-top: 8%;
+main {
+    background-color: rgba(166, 245, 147, 0.61);
+    padding-top: 5%;
     padding-bottom: 8%;
+    display: flex;
+    /*Alinha no centro da classe pai*/
+    justify-content: center;
+    align-items: center;
+    /*Fim*/
+
 }
 
-.container{
-    width: 100%;
-    display: flex;/*Alinha no centro da classe pai*/
+.container {
+    background-color:white;
+    width: 30%;
+    display: flex;
+    /*Alinha no centro da classe pai*/
     justify-content: center;
-    align-items: center;/*Fim*/
-    flex-direction: column/*Alinha em coluna*/
+    align-items: center;
+    /*Fim*/
+    flex-direction: column;
+    box-shadow: 8px 5px 5px rgba(0, 0, 0, 0.575);
 }
-.login{
-    background-color: rgba(255, 255, 255, 0.61);
-    box-shadow: 10px 5px 5px rgb(34, 32, 32);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 25px;
-    display: flex;/*Alinha no centro da classe pai*/
-    justify-content: center;
-    align-items: center;/*Fim*/
-    flex-direction: column;/*Alinha em coluna*/
-    width: 27%;
-    padding: 2%;
-    padding-bottom: 5%;
-    padding-bottom: 5%;
-}
-.login>h1{
-    font-size: 50px;
+.container h1{
+    width: 80%;
+    font-size: 28px;
+    color: rgb(6, 104, 6);
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgba(1, 102, 1, 0.897);
-    padding: 20px;
+    padding: 2%;
 }
-.login i{
-    color: rgba(1, 102, 1, 0.897);
-    font-size: 27px;
+
+.imagem{
+    padding: 10px;
+    background-color: rgb(6, 104, 6);
+    margin-bottom: 3%;
+}
+.imagem img{
+    padding: 2%;
+    width: 70%;
 }
 .linha{
-    height: 3px;
-    background-color: rgba(1, 102, 1, 0.897);
-    border-radius: 20px;
-    width: 90%;
+    height: 2px;
+    width: 80%;
+    background-color: rgb(6, 104, 6);
+    margin: 1% 0 10% 0;
+}
+.login {
+    position: relative;
+    padding-top: 13px;
+    margin-bottom: 3%;
+    width: 80%;
 }
 
-input{
-    padding: 5px;
-    height: 30px;
-    color: rgba(1, 102, 1, 0.897);
-    border-radius: 4px;
-    border: none;
-    box-shadow: 7px 5px 5px rgb(155, 150, 150);
+.login input {
+    padding: 3px;
+    width: 70%;
+    border: 0;
+    box-shadow: 2px 1px 1px rgb(119, 114, 114);
+    outline: none;
+    min-width: 180px;
+    font-size: 16px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -webkit-appearance: none;
+    border-radius: 0;
 }
-input:focus{
-    box-shadow: 0 0 0 0;
-    outline: 0;
+
+.login input:focus {
+    box-shadow: 2px 1px 1px rgb(6, 104, 6);
 }
-.login #email{
-    margin-top: 30%;
-    font-size: 20px;
+
+.login input::placeholder {
+    color: transparent;
 }
-.login #senha{
-    margin-top: 5%;
-    width: 60%;
-    font-size: 20px;
+
+.login label {
+    color: rgb(116, 110, 110);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 13px;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
 }
-#email::-webkit-input-placeholder{
-    color: rgba(1, 102, 1, 0.897);
-    letter-spacing: 2px;
+#email{
+    width: 70%;
 }
-#senha::-webkit-input-placeholder{
-    color: rgba(1, 102, 1, 0.897);
-    letter-spacing: 2px;
+#senha{
+    width: 40%;
 }
-#trocarSenha{
-    font-weight: bold;
-    margin-bottom: 10%;
-    margin-top: 5%;
-    color: rgba(1, 102, 1, 0.897);
+.login input:focus+label,
+.login input:not(:placeholder-shown)+label{
+    font-size: 13px;
+    margin-top: 0;
+    color: rgb(6, 104, 6);
+}
+.mostra-senha{
+    font-size: 14px;
+    width: 80%;
+    padding: 0 0 2% 2%;
+}
+
+
+.altera{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+}
+.altera a{
+    transition: .3s;
+    color: rgb(6, 104, 6);
     text-decoration: none;
+    padding-top: 1%;
 }
-
-#logar,#cadastrar{
-    transition: 0.4s;
-    margin-top: 4%;
+.altera a:hover{
+    color: rgb(1, 54, 1);
+}
+#logar{
+    transition: .4s ease-in-out;
     color: aliceblue;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
-    width: 60%;
-    height: 40px;
+    margin: 5% 0 8% 0;
+    width: 50%;
+    padding: 2%;
+    background-color: rgb(6, 104, 6);
     border: none;
-    background-color:rgba(1, 102, 1, 0.897);
     border-radius: 20px;
     cursor: pointer;
 }
-#logar:hover,#cadastrar:hover{
+#logar:hover{
     transform: scale(1.05);
-    background-color:rgb(1, 102, 1) ;
+    background-color: rgb(1, 54, 1);
 }

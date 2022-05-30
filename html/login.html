@@ -7,31 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../style/reset.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style/footer.css">
     <link rel="stylesheet" href="../style/login.css">
-
+    
 </head>
 
 <body>
     <header>
         <div id="logo">
-          <a href=""><img src="../img/logo.png" alt="Logo"></a>  
+            <a href=""><img src="../img/logo.png" alt="Logo"></a>
         </div>
     </header>
     <main>
+
         <div class="container">
-            <div class="login">
-                <h1>Entrar</h1>
-                <div class="linha"></div>
-                <i class="fa-solid fa-envelope">
-                <input type="email" name="email" id="email" placeholder="E-mail"></i>
-                <i class="fa-solid fa-lock">
-                <input type="password" name="senha" id="senha" placeholder="Senha"></i>
-                <a href="" id="trocarSenha">Esqueceu sua senha?</a>
-                <button id="logar">Logar</button>
-                <button id="cadastrar">Cadastrar</button>
+
+            <div class="imagem">
+                <img src="../img/imglogin.png" alt="Logo ifsuldeminas">
             </div>
+            <h1>Entrar</h1>
+            <div class="linha"></div>
+            <div class="login">
+                <input type="email" name="email" id="email" placeholder=" ">
+                <label><i class="fa-solid fa-envelope"></i> E-mail</label>
+
+            </div>
+            <div class="login">
+                <input type="password" name="senha" id="senha" placeholder=" ">
+                <label><i class="fa-solid fa-lock"></i> Senha</label>
+            </div>
+            <div class="mostra-senha">
+            <label><input type="checkbox" class="exsenha">Exibir senha</label>
+        </div>
+            <div class="altera">
+                <a href="" id="trocarSenha">Esqueceu sua senha?</a>
+                <a href="" id="cadastro">Primeiro acesso?</a>
+            </div>
+            <button id="logar">Logar</button>
         </div>
     </main>
     <footer>
@@ -42,12 +57,14 @@
                 <p>Jacuí - MG</p>
             </div>
             <div class="links">
-                <a href="" target="_blank"><img src="../img/github.png" alt=""></a>
-                <a href="" target="_blank"><img src="../img/instagram.png" alt=""></a>
-                <a href="" target="_blank"><img src="../img/linkedin.png" alt=""></a>
+                <a href="https://github.com/DioneJA" target="_blank"><img src="../img/github.png" alt=""></a>
+                <a href="https://www.instagram.com/phenriquece/?hl=pt-br" target="_blank"><img
+                        src="../img/instagram.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/pedro-henrique-9b7955208/" target="_blank"><img
+                        src="../img/linkedin.png" alt=""></a>
             </div>
         </div>
     </footer>
 </body>
-
+<script src="../js/mostra-senha.js"></script>
 </html>
