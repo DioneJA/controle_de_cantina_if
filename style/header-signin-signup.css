@@ -19,9 +19,9 @@ header {
     width: 30%;
 }
 
-/*Tela de login*/
+/*Formatacao do main para centralizar o cadastro*/
 main {
-    background-color: rgba(166, 245, 147, 0.61);
+    background-color: rgba(183, 253, 165, 0.322);
     padding-top: 5%;
     padding-bottom: 8%;
     display: flex;
@@ -31,10 +31,10 @@ main {
     /*Fim*/
 
 }
-
+/*Formatacao de container, onde estara toda tela de login*/
 .container {
     background-color:white;
-    width: 30%;
+    width: 32%;
     display: flex;
     /*Alinha no centro da classe pai*/
     justify-content: center;
@@ -51,6 +51,7 @@ main {
     padding: 2%;
 }
 
+/*Imagem do ifsuldeminas com controle de cantina*/
 .imagem{
     padding: 10px;
     background-color: rgb(6, 104, 6);
@@ -66,6 +67,8 @@ main {
     background-color: rgb(6, 104, 6);
     margin: 1% 0 10% 0;
 }
+
+/*Formata os inputs*/
 .login {
     position: relative;
     padding-top: 13px;
@@ -77,7 +80,7 @@ main {
     padding: 3px;
     width: 70%;
     border: 0;
-    box-shadow: 2px 1px 1px rgb(119, 114, 114);
+    border-bottom: 1px solid grey;
     outline: none;
     min-width: 180px;
     font-size: 16px;
@@ -89,7 +92,7 @@ main {
 }
 
 .login input:focus {
-    box-shadow: 2px 1px 1px rgb(6, 104, 6);
+    border-bottom: 1px solid rgb(6, 104, 6);
 }
 
 .login input::placeholder {
@@ -107,11 +110,8 @@ main {
     -webkit-transition: all .3s ease-out;
     -moz-transition: all .3s ease-out;
 }
-#email{
-    width: 70%;
-}
-#senha{
-    width: 40%;
+#senha,#senha-confirmada{
+    width: 52%;
 }
 .login input:focus+label,
 .login input:not(:placeholder-shown)+label{
@@ -119,11 +119,33 @@ main {
     margin-top: 0;
     color: rgb(6, 104, 6);
 }
+/*Exibir a senha*/
 .mostra-senha{
     font-size: 14px;
     width: 80%;
     padding: 0 0 2% 2%;
 }
+
+/*Botao*/
+#botao{
+    transition: .4s ease-in-out;
+    color: aliceblue;
+    font-size: 17px;
+    font-weight: bold;
+    margin: 5% 0 8% 0;
+    width: 50%;
+    padding: 2%;
+    background-color: rgb(6, 104, 6);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#botao:hover{
+    transform: scale(1.05);
+    background-color: rgb(1, 54, 1);
+}
+
+/*redirecionamento*/
 
 
 .altera{
@@ -141,21 +163,4 @@ main {
 }
 .altera a:hover{
     color: rgb(1, 54, 1);
-}
-#logar{
-    transition: .4s ease-in-out;
-    color: aliceblue;
-    font-size: 17px;
-    font-weight: bold;
-    margin: 5% 0 8% 0;
-    width: 50%;
-    padding: 2%;
-    background-color: rgb(6, 104, 6);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-}
-#logar:hover{
-    transform: scale(1.05);
-    background-color: rgb(1, 54, 1);
 }
