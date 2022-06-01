@@ -111,7 +111,7 @@ main {
     -moz-transition: all .3s ease-out;
 }
 #senha,#senha-confirmada{
-    width: 52%;
+    width: 55%;
 }
 .login input:focus+label,
 .login input:not(:placeholder-shown)+label{
@@ -120,12 +120,16 @@ main {
     color: rgb(6, 104, 6);
 }
 /*Exibir a senha*/
-.mostra-senha{
-    font-size: 14px;
-    width: 80%;
-    padding: 0 0 2% 2%;
+#exibe-senha,#exibe-senha1,#exibe-senha2{
+    height: 23px;
+    width: 23px;
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
 }
-
 /*Botao*/
 #botao{
     transition: .4s ease-in-out;

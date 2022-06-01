@@ -16,7 +16,7 @@
 <body>
     <header>
         <div id="logo">
-            <a href=""><img src="img/logo.png" alt="Logo"></a>
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
         </div>
     </header>
     <main>
@@ -30,13 +30,12 @@
             <div class="login">
                 <input type="password" name="senha" id="senha" placeholder=" ">
                 <label><i class="fa-solid fa-lock"></i> Nova senha</label>
+                <button type="button" id="exibe-senha1" style="background-image: url('img/olho-vermelho.png');"></button>
             </div>
             <div class="login">
                 <input type="password" name="senha-confirmada" id="senha-confirmada" placeholder=" ">
                 <label><i class="fa-solid fa-lock"></i> Confirme a sua senha</label>
-            </div>
-            <div class="mostra-senha">
-                <label><input type="checkbox" class="exsenha">Exibir senha</label>
+                <button type="button" id="exibe-senha2" style="background-image: url('img/olho-vermelho.png');"></button>
             </div>
             <div class="altera">
                 <a href="index.html" id="loga">Ir para tela de login.</a>
@@ -62,4 +61,5 @@
     </footer>
 </body>
 <script src="js/mostra-senha-cadatro.js"></script>
+<script src="js/enter-botao.js"></script>
 </html>

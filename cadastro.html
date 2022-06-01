@@ -20,7 +20,7 @@
 <body>
     <header>
         <div id="logo">
-            <a href=""><img src="img/logo.png" alt="Logo"></a>
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
         </div>
     </header>
     <main>
@@ -34,17 +34,17 @@
 
             <div class="login">
                 <input type="text" name="nome" id="nome" placeholder=" ">
-                <label><i class="fa-solid fa-user"></i> Nome</label>
+                <label class="nome-label"><i class="fa-solid fa-user"></i> Nome</label>
             </div>
             <div class="login">
 
                 <input type="email" name="email" id="email" placeholder=" ">
-                <label><i class="fa-solid fa-envelope"></i> E-mail</label>
+                <label class="email-label"><i class="fa-solid fa-envelope"></i> E-mail</label>
             </div>
             <div class="login">
 
                 <input type="text" name="ra" id="ra" placeholder=" ">
-                <label><i class="fa-solid fa-address-card"></i> Registro Acadêmico</label>
+                <label class="ra-label"><i class="fa-solid fa-address-card"></i> Registro Acadêmico</label>
             </div>
             <div class="data">
                 <label class="data-label">Data de nascimento: <br><i class="fa-solid fa-calendar"></i>
@@ -78,20 +78,18 @@
             </div>
             <div class="login">
                 <input type="password" name="senha" id="senha" placeholder=" ">
-                <label><i class="fa-solid fa-lock"></i> Senha</label>
+                <label class="senha-label"><i class="fa-solid fa-lock"></i> Senha</label>
+                <button type="button" id="exibe-senha1" style="background-image: url('img/olho-vermelho.png');"></button>
             </div>
             <div class="login">
                 <input type="password" name="senha-confirmada" id="senha-confirmada" placeholder=" ">
-                <label><i class="fa-solid fa-lock"></i> Confirme a sua senha</label>
-            </div>
-            <div class="mostra-senha">
-                <label><input type="checkbox" class="exsenha">Exibir senha</label>
+                <label class="senhaConfirmada-label"><i class="fa-solid fa-lock"></i> Confirme a sua senha</label>
+                <button type="button" id="exibe-senha2" style="background-image: url('img/olho-vermelho.png');"></button>
             </div>
             <div class="altera">
                 <a href="index.html" id="loga">Já possui uma conta?</a>
             </div>
             <input type="button" value="Cadastrar" id="botao">
-
         </div>
     </main>
     <footer>
@@ -113,4 +111,6 @@
 </body>
 <script src="js/mostra-senha-cadatro.js"></script>
 <script src="js/style-selection.js"></script>
+<script src="js/enter-botao.js"></script>
+<script src="js/verifica-cadastro.js"></script>
 </html>

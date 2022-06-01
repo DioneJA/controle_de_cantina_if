@@ -1,10 +1,11 @@
-var exsenha = document.querySelector(".exsenha");
+var exsenha = document.querySelector("#exibe-senha");
 var senha = document.querySelector("#senha");
 
-exsenha.addEventListener("click",function(){
-    if(exsenha.checked==true){
-        senha.type = "text";
-    }else{
-        senha.type = "password";
-    }
+exsenha.addEventListener("mouseover",function(){
+    senha.type = "text";
+    exsenha.style.backgroundImage = "url('img/olho.png')";
+});
+exsenha.addEventListener("mouseout",function(){
+    senha.type = "password";
+    exsenha.style.backgroundImage = "url('img/olho-vermelho.png')";
 });
