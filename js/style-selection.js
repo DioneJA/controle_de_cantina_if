@@ -4,8 +4,11 @@ var curso_label = document.querySelector(".curso-label");
 var curso_input = document.querySelector("#curso");
 var periodo_label = document.querySelector(".periodo-label");
 var periodo_input = document.querySelector("#periodo");
+var email_input = document.querySelector("#email");
+var email_label = document.querySelector(".email-label");
 
-data_input.addEventListener("focusout",function(){
+
+data_input.addEventListener("input",function(){
     if(data_input.value!=""){
         data_label.style.color = "rgb(6, 104, 6)";
         data_input.style.color = "black";
