@@ -1,9 +1,77 @@
-#principal h1 {
-  text-align: center;
-  font-size: larger;
+
+
+body{
+  background-color: #a9fd9859;
+}
+#principal{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#principal p {
+h1 {
   text-align: center;
-  font-size: medium;
+  font-size: 25pt;
 }
+
+h2{
+  text-align: center;
+  font-size: 15pt;
+}
+#prevencao-container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#prevencao { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#prevencao img{
+  width: 35%;
+}
+#container{
+  width: 72%;
+}
+
+.gallery-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2vw;
+  padding: 2vw 2vw;
+  
+}
+
+.gallery-items{
+  width: 250px;
+  height: 250px;
+  border: 7px solid #FFF;
+  box-shadow: 5px 5px 5px #0006;
+  flex-grow: 1;
+  transition: transform .5s linear;
+}
+
+.gallery-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-items:hover{
+  transform: scale(1.1);
+}
+
+.gallery-items-esp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #FFF;
+  box-shadow: 5px 5px 5px #0006;
+}
+
