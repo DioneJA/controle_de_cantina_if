@@ -24,3 +24,16 @@ label{
 .periodo{
     margin-bottom: 2%;
 }
+.senha-invalida{
+    width: 80%;
+    transition: .3s;
+    opacity: 0%;
+    visibility: hidden;
+}
+.senha-invalida-pos{
+    width: 80%;
+    transition: .3s;
+    color: red;
+    opacity: 100%;
+    visibility: visible;
+}

@@ -1,3 +1,13 @@
+<?php
+    include_once("config.php");
+    if(empty($_POST["email"])|| empty($_POST["senha"])){
+        header("Location:index.php");
+        exit();
+    }
+
+    $usuario = mysqli_real_escape_string($_POST["email"]);
+    $senha = mysqli_real_escape_string($_POST["senha"]);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,7 +29,7 @@
 <body>
     <header>
         <div id="logo">
-            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+            <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
         </div>
     </header>
     <main>
@@ -38,13 +48,13 @@
             <div class="login">
                 <input type="password" name="senha" id="senha" placeholder=" ">
                 <label class="senha-label"><i class="fa-solid fa-lock"></i> Senha</label>
-                <button type="button" id="exibe-senha" style="background-image: url('img/olho-vermelho.png');"></button>
+                <button type="submit" id="exibe-senha" style="background-image: url('img/olho-vermelho.png');"></button>
             </div>
             <div class="altera">
                 <a href="verifica-email.html" id="trocarSenha">Esqueceu sua senha?</a>
-                <a href="cadastro.html" id="cadastro">Primeiro acesso?</a>
+                <a href="cadastro.php" id="cadastro">Primeiro acesso?</a>
             </div>
-            <button id="botao">Logar</button>
+            <input type="submit" id="botao" value="Login">
         </div>
     </main>
     <footer>
