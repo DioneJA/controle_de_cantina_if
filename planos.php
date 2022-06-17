@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if ($_SESSION['login'] == true) {
+} else {
+    header("Location:index.php?mensagem=nl");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style/homeStyle.css">
 </head>
 
 <body>
@@ -29,39 +39,40 @@
             <input type="checkbox" id="id-show-menu" class="checkbox-menu" role="button">
             <div class="menu-block">
                 <ul class="navUL">
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="cardapio.html">CARDÁPIO RESTAURANTE</a></li>
-                    <li><a href="cardapiocantina.html">CARDÁPIO LANCHONETE</a></li>
-                    <li><a href="">PEDIDOS</a></li>
+                    <li><a href="home.php"><i class="fa-solid fa-house"> HOME</i></a></li>
+                    <li><a href="cardapio.php"><i class="fa-solid fa-utensils"> CARDÁPIO RESTAURANTE</i></a></li>
+                    <li><a href="cardapiocantina.php"><i class="fa-solid fa-burger"> CARDÁPIO LANCHONETE</i></a></li>
+                    <li><a href="planos.php"> <i class="fa-solid fa-dollar-sign"> PLANOS</i></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main class="secundario">
+        <h1>Planos disponíveis</h1>
         <ul class="produtos">
             <li class="item">
                 <h2>Diário</h2>
-                <p>teste</p>
+                <img src="img/10.png" alt="10">
             </li>
             <li class="item">
                 <h2>Mensal</h2>
-                
+                <img src="img/20.png" alt="20">
             </li>
             <li class="item">
                 <h2>Trimestral</h2>
-                
+                <img src="img/50.png" alt="50">
             </li>
             <li class="item">
                 <h2>Semestral</h2>
-                
+                <img src="img/cem.png" alt="100">
             </li>
             <li class="item">
                 <h2>Anual</h2>
-                
+                <img src="img/quatrocentos.png" alt="400">
             </li>
             <li class="item">
                 <h2>Cupom para ambas lanchonetes</h2>
-                
+                <img src="img/500.png" alt="500">
             </li>
         </li>
     </main>

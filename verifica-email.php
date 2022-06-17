@@ -41,7 +41,7 @@ session_destroy();
                 <label class="ra-label"><i class="fa-solid fa-address-card"></i> Registro Acadêmico</label>
             </div>
             <div class="altera">
-                <a href="index.html" id="loga">Ir para tela de login.</a>
+                <a href="index.php" id="loga">Ir para tela de login.</a>
                 <a href="cadastro.php" id="loga">Ir para tela de cadastro.</a>
             </div>
             <p class="incorreto">

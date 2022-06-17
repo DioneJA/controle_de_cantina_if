@@ -1,12 +1,13 @@
 <?php
-// session_start inicia a sessão
+
 session_start();
 if ($_SESSION['login'] == true) {
 } else {
-
     header("Location:index.php?mensagem=nl");
 }
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +21,6 @@ if ($_SESSION['login'] == true) {
     <link rel="stylesheet" href="style/header.css">
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
@@ -37,10 +37,10 @@ if ($_SESSION['login'] == true) {
             <input type="checkbox" id="id-show-menu" class="checkbox-menu" role="button">
             <div class="menu-block">
                 <ul class="navUL">
-                    <li><a href="home.html">HOME</a></li>
-                    <li><a href="cardapio.html">CARDÁPIO RESTAURANTE</a></li>
-                    <li><a href="cardapiocantina.html">CARDÁPIO LANCHONETE</a></li>
-                    <li><a href="">PEDIDOS</a></li>
+                    <li><a href="home.php"><i class="fa-solid fa-house"> HOME</i></a></li>
+                    <li><a href="cardapio.php"><i class="fa-solid fa-utensils"> CARDÁPIO RESTAURANTE</i></a></li>
+                    <li><a href="cardapiocantina.php"><i class="fa-solid fa-burger"> CARDÁPIO LANCHONETE</i></a></li>
+                    <li><a href="planos.php"> <i class="fa-solid fa-dollar-sign"> PLANOS</i></a></li>
                 </ul>
             </div>
         </nav>
@@ -49,8 +49,8 @@ if ($_SESSION['login'] == true) {
         <div class="texto">
             <br><br>
             <h1>Seja bem vindo ao Controle de Cantina do IFSULDEMINAS Campus Passos!</h1><br>
-            <h2>Aqui será possível você ter acesso aos nossos cardápios, do restaurante e lanchonete e também realizar
-                pedidos com antecedência!</h2><br>
+            <h2>Aqui será possível você ter acesso aos nossos cardápios, do restaurante e lanchonete e também vizulizar planos
+                com antecedência!</h2><br>
             <h2>Nosso Campus oferece tudo da melhor qualidade e melhor preço (nem sempre).</h2><br>
             <hr>
         </div>
@@ -59,10 +59,9 @@ if ($_SESSION['login'] == true) {
                 <img src="img/Placa_restaurante_page-0001.jpg" alt="prevencao">
             </div>
         </div>
-
         <div id="container">
-            <hr><br>
-            <h1>Imagens retiradas do IFSULDEMINAS - Campus Passos-MG</h1>
+            <br>
+            <hr>
             <div class="gallery-container">
                 <a class="gallery-items">
                     <img src="img/comida1.jpg" alt="Comida">
@@ -82,7 +81,7 @@ if ($_SESSION['login'] == true) {
                 <a class="gallery-items">
                     <img src="img/comida6.jpg" alt="Comida">
                 </a>
-                <a href="cardapiocantina.html" class="gallery-items-esp">
+                <a class="gallery-items-esp">
                     <img src="img/restaurante_home.png" alt="Comida">
                 </a>
             </div>

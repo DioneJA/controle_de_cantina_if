@@ -43,7 +43,7 @@ session_destroy();
                 <button type="button" id="exibe-senha" style="background-image: url('img/olho-vermelho.png'); "></button>
             </div>
             <div class="altera">
-                <a href="verifica-email.html" id="trocarSenha">Esqueceu sua senha?</a>
+                <a href="verifica-email.php" id="trocarSenha">Esqueceu sua senha?</a>
                 <a href="cadastro.php" id="cadastro">Primeiro acesso?</a>
             </div>
             <p class="incorreto">

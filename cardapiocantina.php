@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if ($_SESSION['login'] == true) {
+} else {
+    header("Location:index.php?mensagem=nl");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +38,10 @@
             <input type="checkbox" id="id-show-menu" class="checkbox-menu" role="button">
             <div class="menu-block">
                 <ul class="navUL">
-                    <li><a href="home.php">HOME</a></li>
-                    <li><a href="cardapio.html">CARDÁPIO RESTAURANTE</a></li>
-                    <li><a href="cardapiocantina.html">CARDÁPIO LANCHONETE</a></li>
-                    <li><a href="">PEDIDOS</a></li>
+                    <li><a href="home.php"><i class="fa-solid fa-house"> HOME</i></a></li>
+                    <li><a href="cardapio.php"><i class="fa-solid fa-utensils"> CARDÁPIO RESTAURANTE</i></a></li>
+                    <li><a href="cardapiocantina.php"><i class="fa-solid fa-burger"> CARDÁPIO LANCHONETE</i></a></li>
+                    <li><a href="planos.php"> <i class="fa-solid fa-dollar-sign"> PLANOS</i></a></li>
                 </ul>
             </div>
         </nav>

@@ -48,8 +48,8 @@ if ($_SESSION['login'] == true) {
                 <button type="button" id="exibe-senha2" style="background-image: url('img/olho-vermelho.png');"></button>
             </div>
             <div class="altera">
-                <a href="index.html" id="loga">Ir para tela de login.</a>
-                <a href="cadastro.html" id="loga">Ir para tela de cadastro.</a>
+                <a href="index.php" id="loga">Ir para tela de login.</a>
+                <a href="cadastro.php" id="loga">Ir para tela de cadastro.</a>
             </div>
             <p class="senha-invalida">⚠ Senhas não coincidem</p>
             <input class="auxiliar" required>
