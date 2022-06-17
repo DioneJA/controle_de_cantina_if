@@ -1,12 +1,7 @@
 <?php
-    include_once("config.php");
-    if(empty($_POST["email"])|| empty($_POST["senha"])){
-        header("Location:index.php");
-        exit();
-    }
+session_start();
+session_destroy();
 
-    $usuario = mysqli_real_escape_string($_POST["email"]);
-    $senha = mysqli_real_escape_string($_POST["senha"]);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,9 +13,7 @@
     <title>IFSULDEMINAS - Login</title>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="shortcut icon" href="img/faveicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/header-signin-signup.css">
 
@@ -29,13 +22,12 @@
 <body>
     <header>
         <div id="logo">
-            <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
+            <a href="index.php"><img class="imgcabecalho" src="img/logo.png" alt="Logo"></a>
         </div>
     </header>
     <main>
 
-        <div class="container">
-
+        <form class="container" action="autentica.php" method="POST">
             <div class="imagem">
                 <img src="img/imglogin.png" alt="Logo ifsuldeminas">
             </div>
@@ -48,14 +40,25 @@
             <div class="login">
                 <input type="password" name="senha" id="senha" placeholder=" ">
                 <label class="senha-label"><i class="fa-solid fa-lock"></i> Senha</label>
-                <button type="submit" id="exibe-senha" style="background-image: url('img/olho-vermelho.png');"></button>
+                <button type="button" id="exibe-senha" style="background-image: url('img/olho-vermelho.png'); "></button>
             </div>
             <div class="altera">
                 <a href="verifica-email.html" id="trocarSenha">Esqueceu sua senha?</a>
                 <a href="cadastro.php" id="cadastro">Primeiro acesso?</a>
             </div>
-            <input type="submit" id="botao" value="Login">
-        </div>
+            <p class="incorreto">
+
+                <?php
+                if ($_GET["mensagem"] == 'nl')
+                    echo "⚠ Usuário não logado";
+                else if ($_GET["mensagem"] == 'ui')
+                    echo "⚠ Usuário ou senha incorretos";
+                ?>
+
+            </p>
+            <input type="submit" id="botao" value="Login" name="submit">
+
+        </form>
     </main>
     <footer>
         <div class="footer">
@@ -66,10 +69,8 @@
             </div>
             <div class="links">
                 <a href="https://github.com/DioneJA" target="_blank"><img src="img/github.png" alt=""></a>
-                <a href="https://www.instagram.com/phenriquece/?hl=pt-br" target="_blank"><img src="img/instagram.png"
-                        alt=""></a>
-                <a href="https://www.linkedin.com/in/pedro-henrique-9b7955208/" target="_blank"><img
-                        src="img/linkedin.png" alt=""></a>
+                <a href="https://www.instagram.com/phenriquece/?hl=pt-br" target="_blank"><img src="img/instagram.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/pedro-henrique-9b7955208/" target="_blank"><img src="img/linkedin.png" alt=""></a>
             </div>
         </div>
     </footer>
@@ -77,4 +78,5 @@
 <script src="js/mostra-senha.js"></script>
 <script src="js/enter-botao.js"></script>
 <script src="js/verifica-login.js"></script>
+
 </html>

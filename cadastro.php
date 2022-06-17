@@ -1,6 +1,6 @@
 <?php
     if(isset($_POST["submit"])){
-        include_once("config.php");
+        include_once("conecta.php");
         $nome = ($_POST["nome"]);
         $email = ($_POST["email"]);
         $ra = ($_POST["ra"]);
@@ -8,7 +8,7 @@
         $curso = ($_POST["curso"]);
         $periodo = ($_POST["periodo"]);
         $senha = ($_POST["senha"]);
-        $resultado = mysqli_query($conexao,"INSERT INTO aluno(nome, email, ra, nascimento, curso, periodo, senha) VALUES('$nome', '$email', '$ra', '$data', '$curso', '$periodo', '$senha')");
+        $resultado = mysqli_query($conexao = abreConexao(),"INSERT INTO aluno(nome, email, ra, nascimento, curso, periodo, senha) VALUES('$nome', '$email', '$ra', '$data', '$curso', '$periodo', '$senha')");
     
     }
 ?>

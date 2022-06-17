@@ -1,0 +1,50 @@
+.secundario{
+    width: 940px;
+    margin: 0 auto;
+}
+.produtos {
+    width: 940px;
+    padding: 50px 0;
+    margin: 0 auto;
+}
+
+.produtos li {
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 1.5% 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 411px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produtos li:hover {
+    transition: 0.3s;
+    border-width: 3px;
+    transform: scale(1.05);
+    border-color: rgb(182, 120, 4);
+}
+
+.produtos li:active {
+    transition: 0.3s;
+    border-color: green;
+}
+
+.produtos .descricao {
+    font-size: 18px;
+}
+
+.produtos .preco {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 22px;
+}

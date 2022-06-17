@@ -159,7 +159,6 @@ botao.addEventListener("click", function () {
         senhaInput.style.borderColor = "rgb(6, 104, 6)";
         auxiliar.value = "aprovado";
     }
-    console.log("Valor: " + auxiliar.value);
     return;
 });
 

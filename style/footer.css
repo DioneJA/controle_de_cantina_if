@@ -1,45 +1,78 @@
-footer{
-    background:linear-gradient(90deg, rgb(4, 194, 4),rgba(31, 187, 31, 0.836),rgb(6, 190, 6));
+footer {
+    background: linear-gradient(90deg, rgb(4, 194, 4), rgba(31, 187, 31, 0.836), rgb(6, 190, 6));
     position: static;
     bottom: 0;
     width: 100%;
 }
-.footer{
+
+.footer {
     padding: 20px;
-    display: flex;/*Alinha no centro da classe pai*/
+    display: flex;
+    /*Alinha no centro da classe pai*/
     justify-content: center;
-    align-items: center;/*Fim*/
-    flex-direction: column/*Alinha em coluna*/
+    align-items: center;
+    /*Fim*/
+    flex-direction: column
+        /*Alinha em coluna*/
 }
-.footer img{
+
+.footer img {
     width: 4.5%;
 }
-.texto{
-    padding:1%;
+
+.texto {
+    padding: 1%;
 }
-.texto p{
+
+.texto p {
     padding-bottom: 1%;
     letter-spacing: 1px;
     font-size: 12pt;
     text-align: center;
     color: aliceblue;
 }
-.links{
+
+.links {
     width: 34%;
-    display: flex;/*Alinha no centro da classe pai*/
+    display: flex;
+    /*Alinha no centro da classe pai*/
     justify-content: center;
-    align-items: center;/*Fim*/
+    align-items: center;
+    /*Fim*/
 }
-.links a{
+
+.links a {
     width: 10%;
     height: auto;
     margin-left: 1%;
     margin-top: 1%;
 }
-.links img{
+
+.links img {
     transition: 0.3s ease-in-out;
     width: 48%;
 }
-.links a:hover>img{
+
+.links a:hover>img {
     transform: scale(1.15);
+}
+
+@media screen and (max-width: 420px) {
+    .links img {
+        width: 70%;
+    }
+
+    #imgfooter {
+        width: 12%;
+        margin: 0 0 5% 0;
+    }
+
+    .links a {
+        width: 100%;
+        padding-left: 10%;
+    }
+
+    .links {
+        margin-top: 2%;
+    }
 }

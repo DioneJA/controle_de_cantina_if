@@ -168,3 +168,30 @@ main {
 .altera a:hover{
     color: rgb(1, 54, 1);
 }
+
+/*Usuario ou senha incorreto*/
+.incorreto{
+    width: 80%;
+    margin: 2% auto;
+    color: red;
+}
+
+@media screen and (max-width: 420px){
+    header{
+        height: 80px;
+    }
+    main{
+        height: auto;
+    }
+    .container{
+        width: 80%;
+        height: auto;
+        margin: 10% auto;
+    }
+    #logo>a>img {
+        width: 50%;
+    }
+    #senha-confirmada{
+        padding: 2%;
+    }
+}
